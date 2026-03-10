@@ -7,3 +7,11 @@ node_modules/
 # Build files
 build/
 dist/
+
+target/
+.idea/
+.metadata/
+.settings/
+dist/
+*.log
+.env
