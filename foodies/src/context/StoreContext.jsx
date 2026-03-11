@@ -41,7 +41,7 @@ export const StoreContextProvider = (props) => {
       const items = await getCartData(token);
       setQuantities(items || {});
     } catch (error) {
-      console.error('Error while fetching the cart data', error);
+      console.error("Error while fetching the cart data", error);
       setQuantities({});
     }
   };
@@ -58,7 +58,8 @@ export const StoreContextProvider = (props) => {
     setRole,
     setQuantities,
     loadCartData,
-    url: "http://localhost:8083"
+    // url: "http://localhost:8083"
+    url: process.env.REACT_APP_API_URL,
   };
 
   useEffect(() => {
